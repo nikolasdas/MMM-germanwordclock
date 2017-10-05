@@ -60,11 +60,6 @@ Module.register("MMM-germanwordclock",{
 		this.elements["it"] = "it";
 		this.elements["is"] = "is";
 
-		this.elements["dot1"] = "dot1";
-		this.elements["dot2"] = "dot2";
-		this.elements["dot3"] = "dot3";
-		this.elements["dot4"] = "dot4";
-
 		// Set Interval for Update
 		var self = this;
 		setInterval(function() {
@@ -126,38 +121,9 @@ Module.register("MMM-germanwordclock",{
 
 
 		elements.push(this.setHour(hour));
-		var dots = this.setDot(minute);
-		for (d in dots) {
-			elements.push(dots[d]);
-		}
 
 		this.changeToAchtive(elements);
 	}, 
-
-	setDot : function(minute) {
-
-		minute = minute % 5;
-		var elements = [];
-
-		switch (minute) {
-			case 0:
-				break;
-			case 1:
-				elements.push("dot1");
-				break;
-			case 2:
-				elements.push("dot1","dot2");
-				break;
-			case 3:
-				elements.push("dot1","dot2","dot3");
-				break;
-			case 4:
-				elements.push("dot1","dot2","dot3","dot4");
-				break;
-		}
-
-		return elements;
-	},
 	
 	setHour: function(hour) {
 
