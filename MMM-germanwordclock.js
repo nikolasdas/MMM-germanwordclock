@@ -212,8 +212,7 @@ Module.register("MMM-germanwordclock",{
 
 		var wrapper = document.createElement("div");
         // 11 letters per line
-		wrapper.innerHTML = "<span id=\"dot1\">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=\"dot2\">.</span><br />" + 
-								"&nbsp;<span id=\"it\">E S</span> K<span id=\"is\"> I S T </span> A <span id=\"five\">F Ü N F</span>&nbsp;<br />" +
+		wrapper.innerHTML = "&nbsp;<span id=\"it\">E S</span> K<span id=\"is\"> I S T </span> A <span id=\"five\">F Ü N F</span>&nbsp;<br />" +
 								"&nbsp;<span id=\"ten\">Z E H N</span> <span id=\"quarter\">V I E R T E L</span>&nbsp;<br />" +
 								"&nbsp;<span id=\"twenty\">Z W A N Z I G </span>S P Ä T&nbsp;<br />" +
                                 "&nbsp;<span id=\"befor\">V O R</span> N U L L <span id=\"past\">N A C H</span>&nbsp;<br />" +
@@ -221,9 +220,8 @@ Module.register("MMM-germanwordclock",{
                                 "&nbsp;<span id=\"hour4\">V I E R</span> S T <span id=\"hour12\">Z W Ö L F </span>&nbsp;<br />" +
 								"&nbsp;<span id=\"hour6\">S E C H S </span><span id=\"hour7\">S I E B E N</span>&nbsp;<br />" +
 								"&nbsp;<span id=\"hour3\">D R E I </span><span id=\"hour5\">F Ü N F </span><span id=\"hour11\">E L F</span>&nbsp;<br />" +
-                                "&nbsp;<span id=\"hour9\">N E U N </span>P I <span id=\"hour2\">Z W E I</span>&nbsp;<br />" +
-                                "&nbsp;<span id=\"hour8\">A C H T </span><span id=\"hour10\">Z E H N</span><span id=\"full\">U H R</span>&nbsp;<br />" +
-								"<span id=\"dot3\">.</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=\"dot4\">.</span><br />";
+                                "&nbsp;<span id=\"hour9\">N E U N </span>P I <span id=\"hour2\">Z W E I</span> N S&nbsp;<br />" +
+                                "&nbsp;<span id=\"hour8\">A C H T </span><span id=\"hour10\">Z E H N </span><span id=\"full\">U H R</span>&nbsp;<br />";
 
 		return wrapper;
 	}
