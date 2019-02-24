@@ -71,15 +71,13 @@ Module.register("MMM-germanwordclock",{
 
 		this.resetWordClock();
 
-	    var currentTime = moment();
-	    var elements = ["it","is"];
-
+    	        var currentTime = moment();
+    	        var elements = ["it","is"];
 
 		var hour = currentTime.hour() % 12;
 		var minute = currentTime.minute();
 
-
-		if (minute >= 0 && minute < 5){ elements.push("full");}
+		if (minute >= 0 && minute < 5) { elements.push("full");}
 		if (minute >= 5 && minute < 10) { elements.push("five","past"); }
 		if (minute >= 10 && minute < 15) { elements.push("ten","past"); }
 		if (minute >= 15 && minute < 20) { elements.push("quarter","past"); }
@@ -178,7 +176,7 @@ Module.register("MMM-germanwordclock",{
 
 		var wrapper = document.createElement("div");
         // 11 letters per line
-		wrapper.innerHTML = "&nbsp;<span id=\"it\">E S</span> K<span id=\"is\"> I S T </span> A <span id=\"five\">F Ü N F</span>&nbsp;<br />" +
+		wrapper.innerHTML = "&nbsp;<span id=\"it\">E S</span> K<span id=\"is\"> I S T </span> A <span id=\"five\">K U R Z</span>&nbsp;<br />" +
 								"&nbsp;<span id=\"ten\">Z E H N</span> <span id=\"quarter\">V I E R T E L</span>&nbsp;<br />" +
 								"&nbsp;<span id=\"twenty\">Z W A N Z I G </span>S P Ä T&nbsp;<br />" +
                                 "&nbsp;<span id=\"befor\">V O R</span> N U L L <span id=\"past\">N A C H</span>&nbsp;<br />" +
