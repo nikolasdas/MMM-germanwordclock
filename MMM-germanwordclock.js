@@ -28,10 +28,7 @@ Module.register('MMM-germanwordclock', {
     start() {
         moment.locale(config.language)
         this.elements = ['hour1', 'hour2', 'hour3', 'hour4', 'hour5', 'hour6', 'hour7', 'hour8', 'hour9', 'hour10', 'hour11', 'hour12', 'before', 'past', 'full', 'five', 'ten', 'quarter', 'twenty', 'half', 'it', 'is', 'einS']
-
-        let self = this
-        setInterval(() => self.updateWordClock(), this.config.updateInterval)
-        this.updateWordClock()
+        setInterval(() => this.updateWordClock(), this.config.updateInterval)
     },
 
     updateWordClock() {
