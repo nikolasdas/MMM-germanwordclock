@@ -26,12 +26,12 @@ Module.register('MMM-germanwordclock', {
     },
 
     start() {
-        Log.info('Starting module: ' + this.name)
         moment.locale(config.language)
         this.elements = ['hour1', 'hour2', 'hour3', 'hour4', 'hour5', 'hour6', 'hour7', 'hour8', 'hour9', 'hour10', 'hour11', 'hour12', 'before', 'past', 'full', 'five', 'ten', 'quarter', 'twenty', 'half', 'it', 'is', 'einS']
 
         let self = this
-        setInterval(self.updateWordClock, this.config.updateInterval)
+        setInterval(() => self.updateWordClock(), this.config.updateInterval)
+        this.updateWordClock()
     },
 
     updateWordClock() {
@@ -71,7 +71,7 @@ Module.register('MMM-germanwordclock', {
         elements.push(hour == 0 ? 'hour12' : `hour${hour}`)
 
         for (let el of this.elements)
-            document.getElementById(el).style.color = el in elements ? this.config.selectedColor : null
+            document.getElementById(el).style.color = elements.includes(el) ? this.config.selectedColor : null
     },
     
     getDom() {
